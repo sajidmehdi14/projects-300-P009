@@ -1,0 +1,93 @@
+{
+  "incident_id": "INC-2024-001234",
+  "title": "Payment Processing Service Outage",
+  "timestamp": "2024-01-15T14:23:45Z",
+  "start_time": "2024-01-15T14:15:00Z",
+  "end_time": "2024-01-15T16:45:30Z",
+  "severity": "critical",
+  "status": "resolved",
+  "description": "500 error rate spike in payment-api causing transaction failures. Database connection pool exhausted. Query timeout errors from PostgreSQL. Stack trace shows deadlock in payment processing thread.",
+  "error_message": "java.sql.SQLException: Connection is not available, request timed out after 30000ms. Caused by: org.postgresql.util.PSQLException: ERROR: deadlock detected. Detail: Process 12345 waits for ShareLock on transaction 67890.",
+  "affected_systems": [
+    "payment-api",
+    "checkout-service",
+    "transaction-processor",
+    "PostgreSQL primary database"
+  ],
+  "affected_users": 15420,
+  "revenue_impact": 287500.00,
+  "customer_complaints": 342,
+  "root_cause": "Database deadlock caused by concurrent high-volume transactions during flash sale. Connection pool size insufficient for traffic spike. Automatic failover delayed due to network partition between primary and replica.",
+  "actions_taken": [
+    "Increased database connection pool from 50 to 200 connections",
+    "Executed manual failover to secondary database replica",
+    "Deployed hotfix to add query timeout handling and retry logic",
+    "Scaled payment-api from 4 to 12 instances to handle load balancer traffic",
+    "Cleared stuck transactions and released database locks",
+    "Verified CDN caching rules for checkout page"
+  ],
+  "next_steps": [
+    "Monitor database replication lag for next 24 hours",
+    "Complete post-incident review with engineering team",
+    "Deploy connection pool auto-scaling configuration",
+    "Update DDoS protection rules to handle traffic spikes"
+  ],
+  "preventive_measures": [
+    "Implement database connection pool monitoring and alerting",
+    "Add circuit breaker pattern to payment-api for graceful degradation",
+    "Increase load testing frequency to simulate flash sale conditions",
+    "Deploy automated failover with reduced network partition tolerance",
+    "Review and optimize slow SQL queries identified during incident"
+  ],
+  "timeline": [
+    {
+      "time": "2024-01-15T14:15:00Z",
+      "event": "Monitoring alert: payment-api 5xx error rate >10%"
+    },
+    {
+      "time": "2024-01-15T14:18:30Z",
+      "event": "On-call engineer investigates. Observes database connection pool saturation"
+    },
+    {
+      "time": "2024-01-15T14:25:00Z",
+      "event": "Incident declared P1. War room initiated"
+    },
+    {
+      "time": "2024-01-15T14:40:00Z",
+      "event": "Root cause identified: database deadlock + insufficient connection pool"
+    },
+    {
+      "time": "2024-01-15T15:10:00Z",
+      "event": "Connection pool increased and hotfix deployed"
+    },
+    {
+      "time": "2024-01-15T15:45:00Z",
+      "event": "Manual failover to replica database completed"
+    },
+    {
+      "time": "2024-01-15T16:15:00Z",
+      "event": "Service health restored. Error rate <0.1%"
+    },
+    {
+      "time": "2024-01-15T16:45:30Z",
+      "event": "Incident resolved. Monitoring continues"
+    }
+  ],
+  "logs": [
+    "[2024-01-15T14:16:23] ERROR [payment-api] Failed to acquire database connection: Timeout waiting for connection from pool",
+    "[2024-01-15T14:16:45] ERROR [payment-api] Transaction rollback failed: org.postgresql.util.PSQLException: current transaction is aborted",
+    "[2024-01-15T14:17:12] WARN  [database] Connection pool exhausted: active=50/50, idle=0, waiting=127",
+    "[2024-01-15T14:18:01] ERROR [postgres] ERROR: deadlock detected DETAIL: Process 12345 waits for ShareLock on transaction 67890",
+    "[2024-01-15T14:19:33] CRIT  [load-balancer] Backend health check failed: payment-api-03 returning 503",
+    "[2024-01-15T14:23:45] ERROR [payment-api] Stack trace: java.lang.Thread.State: WAITING at java.util.concurrent.locks.LockSupport.park"
+  ],
+  "metrics": {
+    "peak_error_rate": "34.2%",
+    "avg_latency_ms": 15420,
+    "failed_transactions": 1247,
+    "successful_transactions": 2183
+  },
+  "contact": "incident-response@company.com",
+  "incident_commander": "John Smith",
+  "engineering_lead": "Sarah Johnson"
+}

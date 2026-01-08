@@ -1,10 +1,12 @@
 # Notes:
 ```text
-We created 3 Claude Code Skills for IT Management with following details.
+We created 5 Claude Code Skills for IT Management with following details.
 
 1- incident-triage-classifier
 2- rca-summary-writer
 3- sla-breach-predictor
+4- executive-incident-reporter
+5- support-metrics-narrator
 ```
 # URLs for skills
 - https://github.com/sajidmehdi14/projects-300-P009/tree/main/.claude/skills/incident-triage-classifier
@@ -12,6 +14,10 @@ We created 3 Claude Code Skills for IT Management with following details.
 - https://github.com/sajidmehdi14/projects-300-P009/tree/main/.claude/skills/rca-summary-writer
 
 - https://github.com/sajidmehdi14/projects-300-P009/tree/main/.claude/skills/sla-breach-predictor
+
+- https://github.com/sajidmehdi14/projects-300-P009/tree/main/.claude/skills/executive-incident-reporter
+
+- https://github.com/sajidmehdi14/projects-300-P009/tree/main/.claude/skills/support-metrics-narrator
 
 # Prompt Skill 1:
 ```text
