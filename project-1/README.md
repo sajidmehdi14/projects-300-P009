@@ -1,11 +1,3 @@
-# Notes:
-```text
-Following 3 Skills regarding to IT Management are created with clude code cli.
-
-1- incident-triage-classifier
-2- rca-summary-writer
-3- sla-breach-predictor
-```
 # Prompt Skill 1:
 ```text
 Create Skill using skill-creator skill standards 

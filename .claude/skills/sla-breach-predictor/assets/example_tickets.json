@@ -1,0 +1,58 @@
+[
+  {
+    "id": "INC001234",
+    "priority": "P1",
+    "status": "In Progress",
+    "created": "2026-01-08 10:00:00",
+    "last_update": "2026-01-08 12:30:00",
+    "assigned_group": "Infrastructure"
+  },
+  {
+    "id": "INC001235",
+    "priority": "P2",
+    "status": "New",
+    "created": "2026-01-07 14:00:00",
+    "last_update": "2026-01-07 14:00:00",
+    "assigned_group": "Application Support"
+  },
+  {
+    "id": "INC001236",
+    "priority": "P3",
+    "status": "In Progress",
+    "created": "2026-01-06 09:00:00",
+    "last_update": "2026-01-07 16:00:00",
+    "assigned_group": "Infrastructure"
+  },
+  {
+    "id": "INC001237",
+    "priority": "P2",
+    "status": "In Progress",
+    "created": "2026-01-07 08:00:00",
+    "last_update": "2026-01-07 09:00:00",
+    "assigned_group": "Database Team"
+  },
+  {
+    "id": "INC001238",
+    "priority": "P4",
+    "status": "New",
+    "created": "2026-01-05 10:00:00",
+    "last_update": "2026-01-05 10:00:00",
+    "assigned_group": "Desktop Support"
+  },
+  {
+    "id": "INC001239",
+    "priority": "P1",
+    "status": "Resolved",
+    "created": "2026-01-07 06:00:00",
+    "last_update": "2026-01-07 08:30:00",
+    "assigned_group": "Infrastructure"
+  },
+  {
+    "id": "INC001240",
+    "priority": "P3",
+    "status": "In Progress",
+    "created": "2026-01-08 07:00:00",
+    "last_update": "2026-01-08 08:00:00",
+    "assigned_group": "Application Support"
+  }
+]
