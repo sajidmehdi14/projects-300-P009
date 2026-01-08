@@ -1,0 +1,186 @@
+# Incident Triage Severity Criteria (ITIL-Based)
+# P1 = Critical, P2 = High, P3 = Medium, P4 = Low
+
+severity_rules:
+  P1:
+    name: "Critical"
+    description: "Complete service outage or security breach affecting many users"
+    keywords:
+      - "down"
+      - "outage"
+      - "all users"
+      - "entire"
+      - "complete"
+      - "critical"
+      - "emergency"
+      - "breach"
+      - "compromised"
+      - "ransomware"
+      - "data loss"
+      - "cannot access"
+      - "not working"
+      - "offline"
+    user_impact:
+      min_users: 100
+      business_critical: true
+    examples:
+      - "Email server is down, entire company affected"
+      - "Security breach detected, customer data exposed"
+      - "Payment system offline, sales halted"
+
+  P2:
+    name: "High"
+    description: "Major functionality impaired or security issue affecting department/group"
+    keywords:
+      - "major"
+      - "urgent"
+      - "department"
+      - "team"
+      - "slow"
+      - "degraded"
+      - "intermittent"
+      - "frequent"
+      - "multiple users"
+      - "high priority"
+    user_impact:
+      min_users: 10
+      business_critical: false
+    examples:
+      - "VPN connection dropping for remote team (30 users)"
+      - "Database queries running extremely slow"
+      - "Suspicious login attempts detected"
+
+  P3:
+    name: "Medium"
+    description: "Minor impact to functionality, workaround available, affects few users"
+    keywords:
+      - "minor"
+      - "workaround"
+      - "few users"
+      - "single user"
+      - "error message"
+      - "issue"
+      - "problem"
+      - "help with"
+      - "need to"
+    user_impact:
+      min_users: 1
+      business_critical: false
+    examples:
+      - "Printer not working on 3rd floor"
+      - "Report generation showing incorrect date format"
+      - "User cannot install approved software"
+
+  P4:
+    name: "Low"
+    description: "Information request, minor issue, or standard request with no urgency"
+    keywords:
+      - "request"
+      - "reset"
+      - "password"
+      - "access"
+      - "question"
+      - "how to"
+      - "new"
+      - "setup"
+      - "information"
+      - "inquiry"
+    user_impact:
+      min_users: 1
+      business_critical: false
+    examples:
+      - "Password reset needed"
+      - "Request access to shared drive"
+      - "How do I set up my email signature?"
+
+# Category classification rules
+categories:
+  Network:
+    keywords:
+      - "network"
+      - "internet"
+      - "wifi"
+      - "vpn"
+      - "connection"
+      - "connectivity"
+      - "router"
+      - "switch"
+      - "firewall"
+      - "dns"
+      - "ip address"
+    resolver_group: "Network Team"
+
+  Security:
+    keywords:
+      - "security"
+      - "breach"
+      - "hack"
+      - "virus"
+      - "malware"
+      - "phishing"
+      - "suspicious"
+      - "compromised"
+      - "ransomware"
+      - "unauthorized"
+      - "mfa"
+      - "2fa"
+    resolver_group: "Security Team"
+
+  Application:
+    keywords:
+      - "app"
+      - "application"
+      - "software"
+      - "system"
+      - "error"
+      - "bug"
+      - "crash"
+      - "not loading"
+      - "not responding"
+      - "database"
+      - "api"
+    resolver_group: "Application Support"
+
+  Hardware:
+    keywords:
+      - "hardware"
+      - "computer"
+      - "laptop"
+      - "desktop"
+      - "printer"
+      - "monitor"
+      - "keyboard"
+      - "mouse"
+      - "device"
+      - "equipment"
+    resolver_group: "Infrastructure Team"
+
+  Access:
+    keywords:
+      - "access"
+      - "password"
+      - "reset"
+      - "login"
+      - "unlock"
+      - "permission"
+      - "account"
+      - "credentials"
+      - "authentication"
+    resolver_group: "Service Desk"
+
+  Other:
+    keywords: []
+    resolver_group: "Service Desk"
+
+# Resolver groups configuration
+resolver_groups:
+  - name: "Network Team"
+    escalation_path: "Network Manager"
+  - name: "Security Team"
+    escalation_path: "CISO"
+  - name: "Application Support"
+    escalation_path: "Application Manager"
+  - name: "Infrastructure Team"
+    escalation_path: "Infrastructure Manager"
+  - name: "Service Desk"
+    escalation_path: "IT Manager"

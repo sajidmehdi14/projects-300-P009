@@ -1,0 +1,7 @@
+VPN Issues for Remote Team
+
+About 30 remote employees are experiencing frequent VPN disconnections. They can reconnect but it's happening every 10-15 minutes, making work very difficult. This has been ongoing for the past 2 hours.
+
+Reported by: Mike Chen (Remote Team Lead)
+Time: 1:45 PM
+Workaround: Some users switching to backup VPN server

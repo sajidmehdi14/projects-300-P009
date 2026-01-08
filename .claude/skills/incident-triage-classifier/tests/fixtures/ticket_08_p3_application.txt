@@ -1,0 +1,8 @@
+Report Generation Error
+
+When I try to generate the monthly expense report, it shows an error message "Invalid date format in cell B45". This is preventing me from completing the monthly close process. I can manually export data as workaround but it takes extra time.
+
+Reported by: Finance Team
+Time: 4:15 PM
+Application: Internal reporting tool
+Impact: One user, workaround available

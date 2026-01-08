@@ -1,0 +1,7 @@
+SECURITY ALERT: Ransomware Detected
+
+Our antivirus has detected ransomware on multiple servers in the production environment. Files are being encrypted. We need security team immediately. Customer data may be compromised.
+
+Reported by: Security Monitoring System
+Time: 2:47 AM
+Affected systems: PROD-DB-01, PROD-APP-02, PROD-WEB-03

@@ -1,0 +1,8 @@
+Multiple Suspicious Login Attempts
+
+We've detected multiple failed login attempts on several executive accounts from unusual IP addresses in Eastern Europe. No successful breaches yet, but activity is ongoing and appears coordinated.
+
+Reported by: Security Monitoring
+Time: 8:30 AM
+Accounts affected: CEO, CFO, 3 VPs
+Actions: Accounts temporarily locked pending review

@@ -1,0 +1,7 @@
+Printer Not Working - 3rd Floor
+
+The main printer on the 3rd floor is showing "Paper Jam" error but there's no paper jam visible. About 5 people in the marketing team use this regularly. We can send to other floor printers as workaround.
+
+Reported by: Lisa Anderson (Marketing)
+Time: 2:30 PM
+Printer: HP LaserJet 4000, Location: Room 315

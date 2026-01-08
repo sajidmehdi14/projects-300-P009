@@ -1,0 +1,7 @@
+WiFi Issues in Conference Room B
+
+The WiFi signal in Conference Room B is very weak. It works but connection is spotty. Only affects people in that specific room, other conference rooms are fine.
+
+Reported by: David Kim
+Time: 9:00 AM
+Workaround: Users can connect via ethernet cable at conference table

@@ -1,0 +1,8 @@
+CRM System Extremely Slow
+
+The CRM system is responding very slowly - queries taking 30+ seconds instead of 2-3 seconds. This is affecting the entire sales team (45 people) who need to access customer data for calls and meetings.
+
+Reported by: Sales Department
+Time: 10:15 AM
+System: Salesforce instance
+Database: Showing high CPU usage
