@@ -9,9 +9,9 @@ This package provides a command-line calculator with support for:
 
 from calculator.exceptions import (
     CalculatorError,
+    DivisionByZeroError,
     InvalidInputError,
     InvalidOperatorError,
-    DivisionByZeroError,
 )
 from calculator.operations import Operator
 

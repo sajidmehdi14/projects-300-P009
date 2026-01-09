@@ -60,34 +60,34 @@
 
 > **NOTE: Write these tests FIRST, get user approval, ensure they FAIL before implementation**
 
-- [ ] T012 [P] [US1] Write unit tests for add function with positive integers in tests/unit/test_operations.py
-- [ ] T013 [P] [US1] Write unit tests for subtract function with positive integers in tests/unit/test_operations.py
-- [ ] T014 [P] [US1] Write unit tests for multiply function with positive integers in tests/unit/test_operations.py
-- [ ] T015 [P] [US1] Write unit tests for divide function with positive integers in tests/unit/test_operations.py
-- [ ] T016 [P] [US1] Write unit test for divide by zero error in tests/unit/test_operations.py
-- [ ] T017 [P] [US1] Write unit tests for parser with valid 3-argument input in tests/unit/test_parser.py
-- [ ] T018 [P] [US1] Write unit tests for parser with invalid input (wrong count, invalid operator) in tests/unit/test_parser.py
-- [ ] T019 [US1] Write integration tests for CLI end-to-end with positive integers in tests/integration/test_cli.py
-- [ ] T020 [US1] Run pytest to verify all tests FAIL (RED) - get user approval to proceed
+- [x] T012 [P] [US1] Write unit tests for add function with positive integers in tests/unit/test_operations.py
+- [x] T013 [P] [US1] Write unit tests for subtract function with positive integers in tests/unit/test_operations.py
+- [x] T014 [P] [US1] Write unit tests for multiply function with positive integers in tests/unit/test_operations.py
+- [x] T015 [P] [US1] Write unit tests for divide function with positive integers in tests/unit/test_operations.py
+- [x] T016 [P] [US1] Write unit tests for divide by zero error in tests/unit/test_operations.py
+- [x] T017 [P] [US1] Write unit tests for parser with valid 3-argument input in tests/unit/test_parser.py
+- [x] T018 [P] [US1] Write unit tests for parser with invalid input (wrong count, invalid operator) in tests/unit/test_parser.py
+- [x] T019 [US1] Write integration tests for CLI end-to-end with positive integers in tests/integration/test_cli.py
+- [x] T020 [US1] Run pytest to verify all tests FAIL (RED) - get user approval to proceed
 
 ### Implementation for User Story 1 (GREEN Phase)
 
-- [ ] T021 [P] [US1] Implement add function in src/calculator/operations.py with type hints (Decimal → Decimal)
-- [ ] T022 [P] [US1] Implement subtract function in src/calculator/operations.py with type hints
-- [ ] T023 [P] [US1] Implement multiply function in src/calculator/operations.py with type hints
-- [ ] T024 [P] [US1] Implement divide function in src/calculator/operations.py with type hints and DivisionByZeroError
-- [ ] T025 [US1] Create Calculation value object in src/calculator/operations.py as frozen dataclass
-- [ ] T026 [US1] Implement Calculation.execute() method dispatching to operation functions
-- [ ] T027 [US1] Create CalculatorInput value object in src/calculator/parser.py as frozen dataclass
-- [ ] T028 [US1] Implement CalculatorInput.parse() classmethod with validation in src/calculator/parser.py
-- [ ] T029 [US1] Create CLI entry point main() in src/calculator/cli.py with sys.argv handling
-- [ ] T030 [US1] Implement error handling in main() catching CalculatorError and printing to stderr
-- [ ] T031 [US1] Implement result formatting (normalize Decimal, remove trailing zeros) in src/calculator/cli.py
-- [ ] T032 [US1] Create __main__.py entry point calling cli.main()
-- [ ] T033 [US1] Add usage message display when no arguments provided in src/calculator/cli.py
-- [ ] T034 [US1] Run pytest to verify all US1 tests PASS (GREEN)
-- [ ] T035 [US1] Run mypy src/ to verify type safety compliance
-- [ ] T036 [US1] Run ruff check and ruff format on all code
+- [x] T021 [P] [US1] Implement add function in src/calculator/operations.py with type hints (Decimal → Decimal)
+- [x] T022 [P] [US1] Implement subtract function in src/calculator/operations.py with type hints
+- [x] T023 [P] [US1] Implement multiply function in src/calculator/operations.py with type hints
+- [x] T024 [P] [US1] Implement divide function in src/calculator/operations.py with type hints and DivisionByZeroError
+- [x] T025 [US1] Create Calculation value object in src/calculator/operations.py as frozen dataclass
+- [x] T026 [US1] Implement Calculation.execute() method dispatching to operation functions
+- [x] T027 [US1] Create CalculatorInput value object in src/calculator/parser.py as frozen dataclass
+- [x] T028 [US1] Implement CalculatorInput.parse() classmethod with validation in src/calculator/parser.py
+- [x] T029 [US1] Create CLI entry point main() in src/calculator/cli.py with sys.argv handling
+- [x] T030 [US1] Implement error handling in main() catching CalculatorError and printing to stderr
+- [x] T031 [US1] Implement result formatting (normalize Decimal, remove trailing zeros) in src/calculator/cli.py
+- [x] T032 [US1] Create __main__.py entry point calling cli.main()
+- [x] T033 [US1] Add usage message display when no arguments provided in src/calculator/cli.py
+- [x] T034 [US1] Run pytest to verify all US1 tests PASS (GREEN)
+- [x] T035 [US1] Run mypy src/ to verify type safety compliance
+- [x] T036 [US1] Run ruff check and ruff format on all code
 
 **Checkpoint**: At this point, User Story 1 should be fully functional and testable independently with positive integers
 
@@ -101,19 +101,19 @@
 
 ### Tests for User Story 2 (Test-First Development - RED Phase)
 
-- [ ] T037 [P] [US2] Write unit tests for operations with decimal operands in tests/unit/test_operations.py
-- [ ] T038 [P] [US2] Write unit tests for decimal precision (0.1 + 0.2 = 0.3) in tests/unit/test_operations.py
-- [ ] T039 [P] [US2] Write unit tests for parser accepting decimal number strings in tests/unit/test_parser.py
-- [ ] T040 [US2] Write integration tests for CLI with decimal numbers in tests/integration/test_cli.py
-- [ ] T041 [US2] Run pytest to verify US2 tests FAIL (RED) - get user approval to proceed
+- [x] T037 [P] [US2] Write unit tests for operations with decimal operands in tests/unit/test_operations.py
+- [x] T038 [P] [US2] Write unit tests for decimal precision (0.1 + 0.2 = 0.3) in tests/unit/test_operations.py
+- [x] T039 [P] [US2] Write unit tests for parser accepting decimal number strings in tests/unit/test_parser.py
+- [x] T040 [US2] Write integration tests for CLI with decimal numbers in tests/integration/test_cli.py
+- [x] T041 [US2] Run pytest to verify US2 tests FAIL (RED) - get user approval to proceed
 
 ### Implementation for User Story 2 (GREEN Phase)
 
-- [ ] T042 [US2] Update parser to handle decimal strings using Decimal() constructor in src/calculator/parser.py
-- [ ] T043 [US2] Add InvalidInputError for non-parseable decimal strings in src/calculator/parser.py
-- [ ] T044 [US2] Update result formatting to handle decimal display precision in src/calculator/cli.py
-- [ ] T045 [US2] Run pytest to verify all US2 tests PASS (GREEN)
-- [ ] T046 [US2] Run mypy and ruff to verify code quality
+- [x] T042 [US2] Update parser to handle decimal strings using Decimal() constructor in src/calculator/parser.py
+- [x] T043 [US2] Add InvalidInputError for non-parseable decimal strings in src/calculator/parser.py
+- [x] T044 [US2] Update result formatting to handle decimal display precision in src/calculator/cli.py
+- [x] T045 [US2] Run pytest to verify all US2 tests PASS (GREEN)
+- [x] T046 [US2] Run mypy and ruff to verify code quality
 
 **Checkpoint**: At this point, User Stories 1 AND 2 should both work independently (positive integers + decimals)
 
@@ -127,18 +127,18 @@
 
 ### Tests for User Story 3 (Test-First Development - RED Phase)
 
-- [ ] T047 [P] [US3] Write unit tests for operations with negative operands in tests/unit/test_operations.py
-- [ ] T048 [P] [US3] Write unit tests for negative result cases in tests/unit/test_operations.py
-- [ ] T049 [P] [US3] Write unit tests for parser accepting negative number strings in tests/unit/test_parser.py
-- [ ] T050 [US3] Write integration tests for CLI with negative numbers in tests/integration/test_cli.py
-- [ ] T051 [US3] Run pytest to verify US3 tests FAIL (RED) - get user approval to proceed
+- [x] T047 [P] [US3] Write unit tests for operations with negative operands in tests/unit/test_operations.py
+- [x] T048 [P] [US3] Write unit tests for negative result cases in tests/unit/test_operations.py
+- [x] T049 [P] [US3] Write unit tests for parser accepting negative number strings in tests/unit/test_parser.py
+- [x] T050 [US3] Write integration tests for CLI with negative numbers in tests/integration/test_cli.py
+- [x] T051 [US3] Run pytest to verify US3 tests FAIL (RED) - get user approval to proceed
 
 ### Implementation for User Story 3 (GREEN Phase)
 
-- [ ] T052 [US3] Update parser to correctly handle negative number parsing (distinguish "-" operator from negative sign) in src/calculator/parser.py
-- [ ] T053 [US3] Verify negative number support in all operations (already handled by Decimal, but test edge cases)
-- [ ] T054 [US3] Run pytest to verify all US3 tests PASS (GREEN)
-- [ ] T055 [US3] Run mypy and ruff to verify code quality
+- [x] T052 [US3] Update parser to correctly handle negative number parsing (distinguish "-" operator from negative sign) in src/calculator/parser.py
+- [x] T053 [US3] Verify negative number support in all operations (already handled by Decimal, but test edge cases)
+- [x] T054 [US3] Run pytest to verify all US3 tests PASS (GREEN)
+- [x] T055 [US3] Run mypy and ruff to verify code quality
 
 **Checkpoint**: All user stories should now be independently functional (positive, decimal, negative numbers)
 
@@ -148,14 +148,14 @@
 
 **Purpose**: Improvements that affect multiple user stories and finalization
 
-- [ ] T056 [P] Add docstrings to all public functions and classes per constitution documentation standards
-- [ ] T057 [P] Run pytest --cov=calculator --cov-report=term-missing to verify 90%+ coverage
-- [ ] T058 [P] Update README.md with complete installation and usage examples from quickstart.md
-- [ ] T059 [P] Create .gitignore for Python (__pycache__, .venv, .mypy_cache, .pytest_cache, .coverage)
-- [ ] T060 [US1] Validate quickstart.md examples by running them manually
-- [ ] T061 Perform final mypy strict mode check across entire codebase
-- [ ] T062 Perform final ruff check and format across entire codebase
-- [ ] T063 Run full test suite and verify <1 second execution time per constitution requirement
+- [x] T056 [P] Add docstrings to all public functions and classes per constitution documentation standards
+- [x] T057 [P] Run pytest --cov=calculator --cov-report=term-missing to verify 90%+ coverage
+- [x] T058 [P] Update README.md with complete installation and usage examples from quickstart.md
+- [x] T059 [P] Create .gitignore for Python (__pycache__, .venv, .mypy_cache, .pytest_cache, .coverage)
+- [x] T060 [US1] Validate quickstart.md examples by running them manually
+- [x] T061 Perform final mypy strict mode check across entire codebase
+- [x] T062 Perform final ruff check and format across entire codebase
+- [x] T063 Run full test suite and verify <1 second execution time per constitution requirement
 
 ---
 

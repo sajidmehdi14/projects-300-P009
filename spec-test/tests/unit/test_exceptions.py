@@ -5,11 +5,12 @@ and message handling per specification requirements.
 """
 
 import pytest
+
 from calculator.exceptions import (
     CalculatorError,
+    DivisionByZeroError,
     InvalidInputError,
     InvalidOperatorError,
-    DivisionByZeroError,
 )
 
 

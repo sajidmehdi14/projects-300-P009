@@ -11,6 +11,7 @@ class CalculatorError(Exception):
     All calculator-specific exceptions inherit from this base class,
     allowing for comprehensive error catching when needed.
     """
+
     pass
 
 
@@ -25,6 +26,7 @@ class InvalidInputError(CalculatorError):
     Args:
         message: Description of the validation error
     """
+
     pass
 
 
@@ -38,6 +40,7 @@ class InvalidOperatorError(InvalidInputError):
         message: Description of the operator error, typically including
                 the invalid operator symbol and list of valid operators
     """
+
     pass
 
 
